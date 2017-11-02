@@ -2,7 +2,9 @@ import { connect } from 'react-redux'
 import TodoList from '../components/TodoList'
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  return {
+    todos: state.todos
+  }
 }
 
 const DisplayTodoList = connect(mapStateToProps)(TodoList);

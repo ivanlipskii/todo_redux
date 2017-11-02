@@ -1,22 +1,15 @@
 import React, { PropTypes } from 'react'
-import Todo from './Todo'
+import Todo from '../containers/Todo'
 
-function TodoList(todos) {
-  console.log(todos);
+function TodoList(state) {
+  console.log(state);
   return (
     <div>
-      {todos.map((todo) =>
-        <Todo key={todo.id} todo={todo} />
+      {state.todos.map((todo) =>
+        <Todo key={todo.id} {...todo} />
       )}
     </div>
   )
 };
-
-/*TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    text: PropTypes.string.isRequired
-  }).isRequired).isRequired
-};*/
 
 export default TodoList
