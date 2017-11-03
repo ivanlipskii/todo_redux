@@ -1,19 +1,21 @@
+let nextTodoId = 0;
+
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      console.log(action);
+      nextTodoId += 1;
       return [
-          ...state,
-          {
-            text: action.text,
-            id: action.id
-          }
-        ]
+        ...state,
+        {
+          text: action.text,
+          id: nextTodoId,
+        },
+      ];
     case 'REMOVE_TODO':
-      return(state.filter((todo) => todo.id !== action.id ? todo : ''));
+      return (state.filter(todo => (todo.id !== action.id ? todo : '')));
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default todos
+export default todos;
