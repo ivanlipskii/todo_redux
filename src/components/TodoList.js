@@ -1,12 +1,11 @@
-import React, { PropTypes } from 'react'
-import Todo from '../containers/Todo'
+import React from 'react'
+import Todo from './Todo'
 
-function TodoList(state) {
-  console.log(state);
+function TodoList(props) {
   return (
     <div>
-      {state.todos.map((todo) =>
-        <Todo key={todo.id} {...todo} />
+      {props.todos.map((todo, onClick) =>
+        <Todo key={todo.id} todo={todo} removeTodo={props.removeTodo}/>
       )}
     </div>
   )

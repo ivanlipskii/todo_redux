@@ -1,6 +1,7 @@
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
+      console.log(action);
       return [
           ...state,
           {
@@ -9,12 +10,7 @@ const todos = (state = [], action) => {
           }
         ]
     case 'REMOVE_TODO':
-      console.log(state);
-      return Object.assign({}, state, {
-        todos: state.filter((todo) => {
-          if (todo.id !== action.id) return true
-        })
-      })
+      return(state.filter((todo) => todo.id !== action.id ? todo : ''));
     default:
       return state
   }
