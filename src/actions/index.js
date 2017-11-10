@@ -5,6 +5,12 @@ export const todoTemperature = text => (
   }
 );
 
+export const addId = () => (
+  {
+    type: 'ADD_ID',
+  }
+)
+
 export const setTemperature = city => dispatch =>
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f897602315c3e8c1bbf2f287508a0415`)
     .then(res => res.json())
@@ -21,7 +27,8 @@ export const addTodo = city => (dispatch) => {
   dispatch({
     type: 'ADD_TODO',
     city,
-  })
+  });
+  dispatch(addId());
   dispatch(setTemperature(city));
 };
 
