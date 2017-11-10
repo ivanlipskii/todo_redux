@@ -7,12 +7,19 @@ const todos = (state = [], action) => {
       return [
         ...state,
         {
-          text: action.text,
+          city: action.city,
           id: nextTodoId,
         },
       ];
     case 'REMOVE_TODO':
       return (state.filter(todo => (todo.id !== action.id ? todo : '')));
+    case 'TODO_TEMPERATURE':
+      return state.map((todo) => {
+        if (todo.city === action.text.currentCity) {
+          return ({ ...todo, temperature: action.text.temperature });
+        }
+        return todo;
+      });
     default:
       return state;
   }

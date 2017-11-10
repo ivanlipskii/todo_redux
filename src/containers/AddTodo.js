@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions';
+import { addTodo, setTemperature } from '../actions';
 
 const mapStateToProps = props =>
   ({ todos: props.todos });
@@ -16,7 +16,9 @@ const AddTodo = (props) => {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <input ref={(node) => {
+        <input
+          required
+          ref={(node) => {
               input = node;
             }
           }
@@ -28,6 +30,6 @@ const AddTodo = (props) => {
     </div>
   );
 };
-const AddTodoList = connect(mapStateToProps, { addTodo })(AddTodo);
+const AddTodoList = connect(mapStateToProps, { addTodo, setTemperature })(AddTodo);
 
 export default AddTodoList;
