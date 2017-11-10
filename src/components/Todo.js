@@ -1,17 +1,17 @@
 import React from 'react';
 
-const Todo = props =>
-  (<div>
-    <p>{props.todo.city}</p>
-    <p>{props.todo.temperature}</p>
+const Todo = props => (
+  <div>
+    <p>{props.todo.text}</p>
     <button onClick={(e) => {
-      e.preventDefault();
-      props.removeTodo(props.todo.id);
-    }
-    }
+          e.preventDefault();
+          props.removeTodo(props.todo.id);
+        }
+      }
     >
       delete
     </button>
-   </div>);
+  </div>
+);
 
 export default Todo;
