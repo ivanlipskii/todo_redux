@@ -6,7 +6,7 @@ const Todo = props =>
     <p>{props.todo.temperature}</p>
     <button onClick={(e) => {
       e.preventDefault();
-      props.removeTodo(props.todo.id);
+      props.removeCity(props.todo.id);
     }
     }
     >

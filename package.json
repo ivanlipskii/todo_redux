@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel": "^6.23.0",
+    "body-parser": "^1.18.2",
+    "express": "*",
+    "knex": "^0.14.0",
+    "mysql": "^2.15.0",
+    "nodemod": "^1.5.19",
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
     "react-open-weather-map": "^2.3.0",
@@ -16,13 +22,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server/app.js"
   },
   "devDependencies": {
+    "babel": "5.x",
+    "babel-loader": "5.x",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
-    "redux-devtools": "^3.4.0"
+    "redux-devtools": "^3.4.1"
   }
 }

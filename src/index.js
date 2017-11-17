@@ -8,7 +8,6 @@ import thunk from 'redux-thunk';
 import todoApp from './reducers/reducers';
 import App from './components/App';
 
-
 const store = createStore(todoApp, composeWithDevTools(applyMiddleware(thunk)));
 
 render(
