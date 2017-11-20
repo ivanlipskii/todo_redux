@@ -6,13 +6,13 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import thunk from 'redux-thunk';
 import todoApp from './reducers/reducers';
-import App from './components/App';
+import DisplayApp from './containers/DisplayApp';
 
 const store = createStore(todoApp, composeWithDevTools(applyMiddleware(thunk)));
 
 render(
   <Provider store={store}>
-    <App />
+    <DisplayApp />
   </Provider>,
   document.getElementById('root'),
 );

@@ -12,6 +12,6 @@ const Todo = props =>
     >
       delete
     </button>
-   </div>);
+  </div>);
 
 export default Todo;

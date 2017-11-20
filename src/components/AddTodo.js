@@ -1,9 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { addTodo, setTemperature } from '../actions';
-
-const mapStateToProps = props =>
-  ({ todos: props.todos });
 
 const AddTodo = (props) => {
   let input;
@@ -19,8 +14,8 @@ const AddTodo = (props) => {
         <input
           required
           ref={(node) => {
-              input = node;
-            }
+            input = node;
+          }
           }
         />
         <button type="submit">
@@ -30,6 +25,5 @@ const AddTodo = (props) => {
     </div>
   );
 };
-const AddTodoList = connect(mapStateToProps, { addTodo, setTemperature })(AddTodo);
 
-export default AddTodoList;
+export default AddTodo;

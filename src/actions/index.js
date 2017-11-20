@@ -56,7 +56,7 @@ export const addTodo = city => (dispatch) => {
   dispatch(setTemperature(city));
 };
 
-export const setInitialState = () => dispatch =>
+export const getCitiesList = () => dispatch =>
   fetch('http://localhost:8080')
     .then(res => res.json())
     .then((data) => {

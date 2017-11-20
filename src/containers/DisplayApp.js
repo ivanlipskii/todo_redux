@@ -1,10 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import AddTodo from '../containers/DisplayAddTodo';
 import DisplayTodoList from '../containers/DisplayTodoList';
+import { getCitiesList } from '../actions';
+
+const mapStateToProps = props => ({
+  todos: props.todos,
+});
 
 class App extends React.Component {
   componentDidMount() {
-    console.log(this.props);
+    this.props.getCitiesList();
   }
   render() {
     return (
@@ -16,4 +22,7 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const DisplayApp = connect(mapStateToProps, { getCitiesList })(App);
+
+export default DisplayApp;
+

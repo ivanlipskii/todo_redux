@@ -5,18 +5,22 @@
   "dependencies": {
     "babel": "^6.23.0",
     "body-parser": "^1.18.2",
+    "eslint": "^4.11.0",
     "express": "*",
+    "express-validator": "^4.3.0",
     "knex": "^0.14.0",
     "mysql": "^2.15.0",
     "nodemod": "^1.5.19",
-    "react": "^16.1.0",
-    "react-dom": "^16.1.0",
+    "nodemon": "^1.12.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
     "react-open-weather-map": "^2.3.0",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.16",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "validator": "^9.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,8 +30,7 @@
     "server": "nodemon server/app.js"
   },
   "devDependencies": {
-    "babel": "5.x",
-    "babel-loader": "5.x",
+    "babel-loader": "^5.4.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
