@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import { addTodo, setTemperature } from '../actions';
-import AddTodo from '../components/AddTodo';
+import { addCityInServer, setTemperature } from '../actions';
+import AddTodo from '../components/AddCity';
 
 const mapStateToProps = props =>
   ({ todos: props.todos });
 
-const DisplayAddTodo = connect(mapStateToProps, { addTodo, setTemperature })(AddTodo);
+const DisplayAddTodo = connect(mapStateToProps, { addCityInServer, setTemperature })(AddTodo);
 
 export default DisplayAddTodo;

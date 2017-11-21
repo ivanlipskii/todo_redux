@@ -8,6 +8,7 @@
     "eslint": "^4.11.0",
     "express": "*",
     "express-validator": "^4.3.0",
+    "express-ws": "^3.0.0",
     "knex": "^0.14.0",
     "mysql": "^2.15.0",
     "nodemod": "^1.5.19",
@@ -17,9 +18,13 @@
     "react-open-weather-map": "^2.3.0",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.16",
+    "react-websocket": "^1.2.0",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
+    "redux-socket.io": "^1.4.0",
     "redux-thunk": "^2.2.0",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4",
     "validator": "^9.1.1"
   },
   "scripts": {

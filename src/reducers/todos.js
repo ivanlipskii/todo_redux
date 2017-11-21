@@ -18,6 +18,15 @@ const todos = (state = [], action) => {
       return [
         ...state,
         ...action.cities];
+    case 'ADD_CITY_REST':
+      console.log([
+        ...state,
+        action.city,
+      ]);
+      return [
+        ...state,
+        action.city,
+      ];
     default:
       return state;
   }

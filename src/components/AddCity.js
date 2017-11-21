@@ -4,7 +4,7 @@ const AddTodo = (props) => {
   let input;
   function onSubmit(e) {
     e.preventDefault();
-    props.addTodo(input.value);
+    props.addCityInServer(input.value);
     input.value = '';
   }
 

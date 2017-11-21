@@ -1,8 +1,8 @@
-const app = require('./app');
+const http = require('./app');
 
 const port = 8080;
 
-app.listen(port, (err) => {
+http.listen(port, (err) => {
   if (err) {
     console.log('Что-то плохое', err);
   }
